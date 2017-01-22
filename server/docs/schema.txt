@@ -19,6 +19,7 @@ zip: "2481",
 countryCode: "AU",
 creatorEmail: "robert@rtessler.com",
 ticketURL: "http://www.bluesfest.com.au/",
+website: null,
 facebookURL: null,
 dateCreated: new Date(),
 dateModified: new Date()
@@ -29,7 +30,7 @@ dateModified: new Date()
 user
 
 db.user.insert({
-firstName: "Yuki",
+firstName: "Robert",
 lastName: "Tessler",
 mobilePhone: "0434991180",
 workPhone: null,
@@ -38,12 +39,12 @@ city: "Haberfield",
 state: "NSW",
 zip: "2045",
 countryCode: "AU",
-email: "y_grass@hotmail.com",
+email: "robert@rtessler.com",
 password: null,
-dateCreated: new Date(),
-dateModified: new Date(),
 smallImage: null,
-largeImage: null
+largeImage: null,
+dateCreated: new Date(),
+dateModified: new Date()
 });
 
 

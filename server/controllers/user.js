@@ -1,5 +1,5 @@
 var express = require('express')
-  , router = express.Router()
+var router = express.Router()
 
 var bodyParser = require('body-parser');        // for post requests
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
