@@ -1,1 +1,1 @@
-ssh -i 'C:\Users\Robert\Dropbox\Projects\Web Projects\festival-planner\festival-planner.pem' ubuntu@35.165.100.69
+ssh -i 'C:\Users\Robert\Dropbox\Projects\Web Projects\festival-planner\festival-planner.pem' ubuntu@ec2-35-165-100-69.us-west-2.compute.amazonaws.com

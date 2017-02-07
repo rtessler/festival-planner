@@ -18,6 +18,7 @@ app.use(cookieParser())
 app.use(require('./controllers'))
 
 var db = require('./db')
+var mongooseDb = require("./mongooseDb")
 
 
 app.get("/getFood", function(req, res) {
@@ -141,6 +142,10 @@ app.get('/ab*cd', function (req, res) {
     res.send('Page Pattern Match');
 })
 
+var dburl = 'mongodb://localhost:27017/festival';
+
+mongooseDb.connect(dburl, function(err) { });
+
 
 db.connect('mongodb://localhost:27017/festival', function(err) {
   if (err) {
@@ -154,7 +159,6 @@ db.connect('mongodb://localhost:27017/festival', function(err) {
        
        console.log("Example app listening at http://%s:%s", host, port);
     })
-
   }
 })
 

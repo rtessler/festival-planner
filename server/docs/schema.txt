@@ -5,12 +5,12 @@ festival
 db.festival.insert(
 {
 name: "Blues Fest",
-dateFrom: "2017-04-13",
-dateTo: "2017-04-17",
+dateFrom: new Date(2017,03,4),
+dateTo: new Date(2017,03,17),
 largeImage: null,
 smallImage: null,
 images: [],
-tite: "Byron Bay Bluesfest is Australia’s Premier Contemporary Blues & Roots Music Festival", 
+title: "Byron Bay Bluesfest is Australia’s Premier Contemporary Blues & Roots Music Festival", 
 description: null,
 address: "Tyagarath Tea Tree Farm",
 city: "Byron Bay",

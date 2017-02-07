@@ -21,7 +21,6 @@ router.get('/findByName', function(req, res) {
   User.findByName(name, function(data) {
 
     res.end( JSON.stringify(data) )
-
   })
 })
 
