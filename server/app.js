@@ -144,9 +144,23 @@ app.get('/ab*cd', function (req, res) {
 
 var dburl = 'mongodb://localhost:27017/festival';
 
-mongooseDb.connect(dburl, function(err) { });
+mongooseDb.connect(dburl, function(err) { 
 
+  if (err) {
+    console.log('Unable to connect to Mongo.')
+    process.exit(1)
+  } else {
 
+    var server = app.listen(8082, function () {
+       var host = server.address().address
+       var port = server.address().port
+       
+       console.log("Example app listening at http://%s:%s", host, port);
+    })
+  }
+});
+
+/*
 db.connect('mongodb://localhost:27017/festival', function(err) {
   if (err) {
     console.log('Unable to connect to Mongo.')
@@ -161,5 +175,6 @@ db.connect('mongodb://localhost:27017/festival', function(err) {
     })
   }
 })
+*/
 
 

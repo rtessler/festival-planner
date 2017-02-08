@@ -4,27 +4,7 @@ var state = {
   db: null,
 }
 
-var festivalSchema = mongoose.Schema({
-name: String,
-dateFrom: Date,
-dateTo: Date,
-largeImage: String,
-smallImage: String,
-images: Array,
-title: String, 
-description: String,
-address: String,
-city: String,
-state: String,
-zip: String,
-countryCode: String,
-creatorEmail: String,
-ticketURL: String,
-website: String,
-facebookURL: String,
-dateCreated: Date,
-dateModified: Date
-});
+
 
 var userSchema = mongoose.Schema ({
 firstName: String,
@@ -52,7 +32,14 @@ exports.connect = function(url, done) {
 
 	var db = mongoose.connection;
 
-	db.on('error', console.error.bind(console, 'mongoose connection error:'));
+	//db.on('error', console.error.bind(console, 'mongoose connection error:'));
+
+	db.on('error',function (err) {  
+
+	  console.log('Mongoose connection error: ' + err);
+
+	  return done(err);
+	}); 
 
 	db.once('open', function() {
 
@@ -61,7 +48,7 @@ exports.connect = function(url, done) {
 	  console.log("mongoose connected ok");
 
 	  state.db = db
-
+/*
 	  var User = mongoose.model('user', userSchema);
 
 	  var x = new User({
@@ -87,7 +74,7 @@ exports.connect = function(url, done) {
 		  
 		  console.log("user saved");
 		});
-
+*/
 
 	  done();
 	});

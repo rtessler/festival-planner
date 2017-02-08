@@ -13,7 +13,6 @@ router.get('/all', function(req, res) {
 
     res.end( JSON.stringify(data) )
   })
-
 })
 
 router.get('/findByName', function(req, res) {
@@ -23,7 +22,6 @@ router.get('/findByName', function(req, res) {
   Festival.findByName(name, function(err, data) {
 
     res.end( JSON.stringify(data) )
-
   })
 })
 
