@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');        // for post requests
 var fs = require("fs");                         // for file system
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 var multer = require('multer');
-var cookieParser = require('cookie-parser')
+var cookieParser = require('cookie-parser');
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -15,7 +15,7 @@ app.use(cookieParser())
 //app.use('/comments', require('./controllers/comments'))
 //app.use('/festival', require('./controllers/festival'))
 
-app.use(require('./controllers'))
+app.use(require('./controllers'));
 
 var db = require('./db')
 var mongooseDb = require("./mongooseDb")
