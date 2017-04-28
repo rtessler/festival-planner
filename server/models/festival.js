@@ -1,5 +1,4 @@
-var db = require('../db')
-
+//var db = require('../db/db');
 var mongoose = require('mongoose');
 
 var festivalSchema = mongoose.Schema({

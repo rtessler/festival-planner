@@ -1,4 +1,4 @@
-var db = require('../db')
+var db = require('../db/db')
   , crypto = require('crypto')
 
 hash = function(password) {

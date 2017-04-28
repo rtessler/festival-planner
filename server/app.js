@@ -12,15 +12,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(multer({ dest: './tmp/' }).single('picture'));      // files get loaded to this directory with unique names
 app.use(cookieParser())
 
+app.set('views', __dirname + '/views')
+//app.engine('pug', require('pug').__express)
+app.set('view engine', 'pug')
+
 //app.use('/comments', require('./controllers/comments'))
-//app.use('/festival', require('./controllers/festival'))
+//app.use('/api/v1/festival', require('./controllers/festival'))
 
-app.use(require('./controllers'));
+//var router = require('./controllers/index')
 
-var db = require('./db')
-var mongooseDb = require("./mongooseDb")
+var index = require("./controllers/index");
+app.use(index);
 
+//var db = require('./db/db')
+var mongooseDb = require("./db/mongooseDb");
 
+/*
 app.get("/getFood", function(req, res) {
 
     var collection = db.get().collection('foods')
@@ -141,6 +148,7 @@ app.get('/ab*cd', function (req, res) {
     console.log("Got a GET request for /ab*cd");
     res.send('Page Pattern Match');
 })
+*/
 
 var dburl = 'mongodb://localhost:27017/festival';
 

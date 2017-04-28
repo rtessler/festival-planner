@@ -1,4 +1,4 @@
-var db = require('../db')
+var db = require('../db/db')
 
 exports.all = function(cb) {
   var collection = db.get().collection('comments')
