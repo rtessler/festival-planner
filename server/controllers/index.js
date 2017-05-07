@@ -1,13 +1,13 @@
 var express = require('express')
 var router = express.Router()
 
-var comments = require('./comments')
-var festival = require('./festival')
-var user = require('./user')
+var commentsController = require('./commentsController')
+var festivalController = require('./festivalController')
+var userController = require('./userController')
 
-router.use('/api/v1/comments', comments)
-router.use('/api/v1/festival', festival)
-router.use('/api/v1/user', user)
+router.use('/api/v1/comments', commentsController)
+router.use('/api/v1/festival', festivalController)
+router.use('/api/v1/user', userController)
 
 /*
 router.get('/home', function (req, res) {
